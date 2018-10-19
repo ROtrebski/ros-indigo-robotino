@@ -40,6 +40,7 @@ RobotinoSafety::RobotinoSafety( )
     nh_.param( "inner_major_radius", e1_major_radius_, 0.40 );
     nh_.param( "inner_minor_radius", e1_minor_radius_, 0.25 );
     nh_.param( "node_loop_rate", node_loop_rate_, 20 );
+    nh_.getParam("use_bumper", stop_bumper_);
     tfListener_.waitForTransform(
         "/base_link", "/laser_link", ros::Time( 0 ), ros::Duration( 1.0 ) );
     tf::StampedTransform tfTMP;
