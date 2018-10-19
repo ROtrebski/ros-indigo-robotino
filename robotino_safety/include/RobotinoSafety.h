@@ -42,6 +42,7 @@ private:
 
 	laser_geometry::LaserProjection projector_;
 	tf::TransformListener tfListener_;
+    tf::Transform transLaserScan;
 
 	bool stop_bumper_, stop_laser_, slow_laser_;
 
